@@ -1,6 +1,6 @@
 FROM beevelop/nodejs-python
 
-MAINTAINER Maik Hummel <m@ikhummel.com>
+MAINTAINER Jasiek Matusz <me@marahin.pl>
 
 WORKDIR /opt
 
@@ -8,7 +8,7 @@ ENV GH_CLIENT_ID=null \
     GH_CLIENT_SECRET=null \
     INFOSITE="http://shields.io"
 
-RUN apt-get update && apt-get install -y pkg-config libcairo2-dev git gettext && \
+RUN apt-get update && apt-get install -y pkg-config libcairo2-dev git gettext imagemagick && \
     git clone https://github.com/badges/shields && cd shields && \
     npm i
 
